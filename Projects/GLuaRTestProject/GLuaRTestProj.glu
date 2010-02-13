@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>GLua Project Test</Name>
+  <Description>Test</Description>
+  <Type>Addon</Type>
+  <Version />
+  <Update />
+  <AuthorName />
+  <AuthorEmail />
+  <AuthorWebsite />
+  <HideEntry>false</HideEntry>
+  <Requirements />
+  <Files>
+    <OpenedFile>
+      <Name>code1.lua</Name>
+    </OpenedFile>
+  </Files>
+  <Folders>
+    <Folder>
+      <Name>Test</Name>
+      <Folders />
+      <Files>
+        <OpenedFile>
+          <Name>cod44e1.lua</Name>
+        </OpenedFile>
+        <OpenedFile>
+          <Name>code2.lua</Name>
+        </OpenedFile>
+      </Files>
+    </Folder>
+    <Folder>
+      <Name>Test</Name>
+      <Parent>
+        <Name>Test</Name>
+        <Folders />
+        <Files>
+          <OpenedFile>
+            <Name>cod44e1.lua</Name>
+          </OpenedFile>
+          <OpenedFile>
+            <Name>code2.lua</Name>
+          </OpenedFile>
+        </Files>
+      </Parent>
+      <Folders />
+      <Files>
+        <OpenedFile>
+          <Name>code1.lua</Name>
+        </OpenedFile>
+      </Files>
+    </Folder>
+  </Folders>
+  <Tasks>
+    <Task>
+      <Priority>Normal</Priority>
+      <Done>true</Done>
+      <Text>Test Task</Text>
+    </Task>
+  </Tasks>
+</Project>

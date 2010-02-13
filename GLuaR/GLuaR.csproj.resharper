@@ -1,0 +1,7 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>59BB1860-810B-4634-9E4E-751328585278/d:Classes/d:Project/d:Templates/d:File Templates</SkipFolder>
+    <SkipFolder>59BB1860-810B-4634-9E4E-751328585278/d:Classes/d:Project</SkipFolder>
+  </NamespaceFolders>
+  <Localizable>No</Localizable>
+</Configuration>

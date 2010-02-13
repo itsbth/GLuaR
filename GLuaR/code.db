@@ -1,0 +1,3232 @@
+<?xml version="1.0"?>
+<!--
+    This file is part of GLuaR
+
+    GLuaR Development Environment
+    Copyright (C) 2007 "Marine" (FPMarine@googlemail.com).
+    Portions by "VoiDeD".
+
+    GLuaR is free software; you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    GLuaR is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<CodeProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Libraries>
+    <Library>
+      <Name>avi</Name>
+      <Description>Don't bother, it's unsupported at the moment.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="End" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GrabFrame" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Start" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>cam</Name>
+      <Description>Camera functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="End2D" Params="" Description="Stops rendering from the 2D camera." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="End3D" Params="" Description="Stops rendering from the 3D positioned camera." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="End3D2D" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="EndCameraPos" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="EndOrthoView" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="PopModelMatrix" Params="" Description="Pops the model matrix. This reverts the matrix to where it was before you pushed the last matrix onto it." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="PushModelMatrix" Params="Matrix" Description="Sets the world/model matrix to matrix. Determines where the mesh will be rendered." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Matrix" Name="matrix" Description="The world/model matrix to set." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Start2D" Params="" Description="Begins the drawing on the 2d camera, this is almost always used with a render target from the render library, to set its position use render.SetViewPort with a target already stored." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Start3D" Params="Vector, Angle" Description="Positions the rendering camera three dimensionally." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Vector" Name="pos" Description="The position to move the camera to." />
+			<Parameter DataType="Angle" Name="ang" Description="The angle of the camera." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Start3D2D" Params="Vector, Angle, Number" Description="Positions the rendering camera three dimensionally to draw on a plane." Type="CLIENT">
+          <Parameters>
+		  	<Parameter DataType="Vector" Name="pos" Description="The position to move the camera to." />
+			<Parameter DataType="Angle" Name="ang" Description="The angle of the camera." />
+			<Parameter DataType="Number" Name="scale" Description="The scale at which to render." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="StartCameraPos" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="StartOrthoView" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>cleanup</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Add" Params="Player, String, Entity" Description="Add an entity to a players clean up list." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player which to add the cleanup list to." />
+			<Parameter DataType="String" Name="type" Description="The type of cleanup to add." />
+			<Parameter DataType="Entity" Name="ent" Description="The entity to add to cleanup." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CC_AdminCleanup" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CC_Cleanup" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Register" Params="String" Description="Register a new clean up type in the cleanup list." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="type" Description="The type to register in the cleanup list." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ReplaceEntity" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="UpdateUI" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>ComboBox_Emitter_Options</Name>
+      <Description>Unknown.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="bloodimpact" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="glassimpact" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="metalsparks" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="muzzle" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="muzzlebig" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="pistol_shell" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="rifle_shell" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="shotgun_shell" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="small_sparks" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sparks" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="striderblood" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>concommand</Name>
+      <Description>Handles the creation and deletion of console commands.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Add" Params="String, nil Func(Player, String, Table), Table Func(String, Table)" Description="Creates a console command that runs a function in lua. Third parameter is optional." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the console command to add." />
+			<Parameter DataType="nil Func(Player, String, Table)" Name="func" Description="The function to call when the console command is used. Function arguments: Player: The player which use the command, String: The command used, Table: String array of arguments." />
+			<Parameter DataType="Table Func(String, Table)" Name="autoComplete" Description="The function to call when autocomplete arguments are requested. Function arguments: String: The command used, Table: String array of arguments. (OPTIONAL)" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="AutoComplete" Params="String, Table" Description="You should not use this function - it is called by the engine automatically." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The command used." />
+			<Parameter DataType="Table" Name="args" Description="String array of arguments." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Remove" Params="String" Description="Removes a console command you have added with concommand.Add." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the console command to remove." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="Run" Params="Player, String, Table" Description="This function should not be used - it is called by the engine." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player to run this command on." />
+			<Parameter DataType="String" Name="name" Description="The command to run." />
+			<Parameter DataType="Table" Name="args" Description="String array of arguments to pass to the command." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>constraint</Name>
+      <Description>Allows ways of restricting the motion of a physically simulated entity.</Description>
+      <Members>
+		<!--
+		TODO: Figure this out
+		Along with most of the functions in constraint.. I need the parameters!
+		-->
+        <Member xsi:type="Function" Return="nil" Name="AddConstraintTable" Params="Entity, Entity, Entity, Entity, Entity" Description="Stores info about the constraints on the entity's table." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The entity to store the table in." />
+			<Parameter DataType="Entity" Name="constraint" Description="The constraint to add to the table." />
+			<Parameter DataType="Entity" Name="ent2" Description="" />
+			<Parameter DataType="Entity" Name="ent3" Description="" />
+			<Parameter DataType="Entity" Name="ent4" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="AddConstraintTableNoDelete" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="AdvBallsocket" Params="Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number, Number, Number, Number, Number, Number, Number, Number, Number, Number" Description="Creates a phys_ragdollconstraint constraint." Type="SERVER">
+          <Parameters>
+		  <Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+		  <Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+		  <Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+		  <Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+		  <Parameter DataType="Vector" Name="pos1" Description="" />
+		  <Parameter DataType="Vector" Name="pos2" Description="" />
+		  <Parameter DataType="Number" Name="forceLimit" Description="" />
+		  <Parameter DataType="Number" Name="torqueLimit" Description="" />
+		  <Parameter DataType="Number" Name="xMin" Description="" />
+		  <Parameter DataType="Number" Name="yMin" Description="" />
+		  <Parameter DataType="Number" Name="zMin" Description="" />
+		  <Parameter DataType="Number" Name="xMax" Description="" />
+		  <Parameter DataType="Number" Name="yMax" Description="" />
+		  <Parameter DataType="Number" Name="zMax" Description="" />
+		  <Parameter DataType="Number" Name="xFric" Description="" />
+		  <Parameter DataType="Number" Name="yFric" Description="" />
+		  <Parameter DataType="Number" Name="zFric" Description="" />
+		  <Parameter DataType="Number" Name="onlyRotation" Description="Specifies if this ballsocket joint only allow rotation." />
+		  <Parameter DataType="Number" Name="noCollide" Description="Specifies if the two entities are to be nocollided." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="Axis" Params="Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number" Description="Creates an axis constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="forceLimit" Description="" />
+			<Parameter DataType="Number" Name="torqueLimit" Description="" />
+			<Parameter DataType="Number" Name="friction" Description="" />
+			<Parameter DataType="Number" Name="noCollide" Description="Specifies if the two entities are to be nocollided." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="Ballsocket" Params="Entity, Entity, Number, Number, Vector, Number, Number, Number" Description="Creates an ball socket constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos" Description="" />
+			<Parameter DataType="Number" Name="forceLimit" Description="" />
+			<Parameter DataType="Number" Name="torqueLimit" Description="" />
+			<Parameter DataType="Number" Name="noCollide" Description="Specifies if the two entities are to be nocollided." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="CanConstrain" Params="Entity, Number" Description="Basic checks to make sure that the specified entity and bone are valid." Type="SERVER">
+          <Parameters>
+		  <Parameter DataType="Entity" Name="ent" Description="The entity to check." />
+		  <Parameter DataType="Number" Name="bone" Description="The bone of the entity to check." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="CreateKeyframeRope" Params="Vector, Number, String, Entity, Entity, Vector, Number, Entity, Vector, Number, Table" Description="Creates a keyframe_rope entity between two points (or entities)." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Vector" Name="ropePos" Description="The position of the keyframe_rope entity." />
+			<Parameter DataType="Number" Name="width" Description="The width of the rope." />
+			<Parameter DataType="String" Name="material" Description="The rope material." />
+			<Parameter DataType="Entity" Name="constraint" Description="" />
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="The position of the first entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Vector" Name="pos2" Description="The position of the second entity." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Table" Name="kv" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, PhysObj, Number, Vector" Name="CreateStaticAnchorPoint" Params="Vector" Description="Creates an invisible, non-moveable anchor point in the world to which things can be attached." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Vector" Name="pos" Description="The position of the anchor point." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity" Name="Elastic" Params="Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, String, Number, Number" Description="Creates an elastic constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="constant" Description="" />
+			<Parameter DataType="Number" Name="damping" Description="" />
+			<Parameter DataType="Number" Name="rDamping" Description="" />
+			<Parameter DataType="String" Name="material" Description="The material of the elastic." />
+			<Parameter DataType="Number" Name="width" Description="The width of the elastic." />
+			<Parameter DataType="Number" Name="stretchOnly" Description="Specifies if the elastic can only stretch." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Find" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindConstraint" Params="Entity, String" Description="Returns the table with information about the first constraint on an entity with the specific name." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to search." />
+			<Parameter DataType="String" Name="type" Description="The type of constraint to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="FindConstraintEntity" Params="Entity, String" Description="Same as constraint.FindConstraint but returns an entity instead of a table." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to search." />
+			<Parameter DataType="String" Name="type" Description="The type of constraint to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindConstraints" Params="Entity, String" Description="Returns the table with information about the constraints on an entity with the specific name." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to search." />
+			<Parameter DataType="String" Name="type" Description="The type of constraint to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ForgetConstraints" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetAllConstrainedEntities" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetTable" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="HasConstraints" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity, Entity, Entity" Name="Hydraulic" Params="Player, Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number, Number, Number" Description="Creates a hydraulic constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player to create the constraint for." />
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="length1" Description="" />
+			<Parameter DataType="Number" Name="length2" Description="" />
+			<Parameter DataType="Number" Name="width" Description="The width of the hydraulic." />
+			<Parameter DataType="Number" Name="key" Description="" />
+			<Parameter DataType="Number" Name="fixed" Description="Specifies if the hydraulic is fixed." />
+			<Parameter DataType="Number" Name="speed" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="Keepupright" Params="Entity, Angle, Number, Number" Description="Creates a keep upright constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to constrain." />
+			<Parameter DataType="Angle" Name="ang" Description="" />
+			<Parameter DataType="Number" Name="bone" Description="The bone of the entity to constain." />
+			<Parameter DataType="Number" Name="angularLimit" Description="The angular limit of the keep upright constraint." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity" Name="Motor" Params="Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number, Number, Player, Number, Number, Number" Description="Creates a motor constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="friction" Description="" />
+			<Parameter DataType="Number" Name="torque" Description="" />
+			<Parameter DataType="Number" Name="forceTime" Description="" />
+			<Parameter DataType="Number" Name="noCollide" Description="Specifies if the two entities are to be nocollided." />
+			<Parameter DataType="Number" Name="toggle" Description="Specifies if the motor constraint is togglable." />
+			<Parameter DataType="Player" Name="player" Description="The player to make this constraint for." />
+			<Parameter DataType="Number" Name="forceLimit" Description="" />
+			<Parameter DataType="Number" Name="keyForward" Description="The key to press to run the motor forward." />
+			<Parameter DataType="Number" Name="keyBackward" Description="The key to press to run the motor backward." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity, Entity, Entity" Name="Muscle" Params="Player, Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number, Number, Number, Number" Description="Creates a muscle constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player to create the constraint for." />
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="length1" Description="" />
+			<Parameter DataType="Number" Name="length2" Description="" />
+			<Parameter DataType="Number" Name="width" Description="The width of the muscle constraint." />
+			<Parameter DataType="Number" Name="key" Description="" />
+			<Parameter DataType="Number" Name="fixed" Description="Specifies if the muscle constraint is fixed." />
+			<Parameter DataType="Number" Name="period" Description="" />
+			<Parameter DataType="Number" Name="amplitude" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="NoCollide" Params="Entity, Entity, Number, Number" Description="Turns off collisions between two props." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="Pulley" Params="Entity, Entity, Number, Number, Vector, Vector, Vector, Vector, Number, Number, Number, String" Description="Creates a pulley constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Vector" Name="pos3" Description="" />
+			<Parameter DataType="Vector" Name="pos4" Description="" />
+			<Parameter DataType="Number" Name="forceLimit" Description="" />
+			<Parameter DataType="Number" Name="rigid" Description="Specifies if this pulley constraint is rigid." />
+			<Parameter DataType="Number" Name="width" Description="The width of the pulley." />
+			<Parameter DataType="String" Name="material" Description="The material of the pulley." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="RemoveAll" Params="Entity" Description="Removes all constraints from an entity." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to remove all constraints from." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="RemoveConstraints" Params="Entity, String" Description="Removes all constraints of a specified type from entity." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to remove constraints from." />
+			<Parameter DataType="String" Name="type" Description="The type of constraint to remove." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity" Name="Rope" Params="Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number, String, Number" Description="Creates a rope constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="length" Description="" />
+			<Parameter DataType="Number" Name="addLength" Description="" />
+			<Parameter DataType="Number" Name="forceLimit" Description="" />
+			<Parameter DataType="Number" Name="width" Description="The width of the rope." />
+			<Parameter DataType="String" Name="material" Description="The material of the rope." />
+			<Parameter DataType="Number" Name="rigid" Description="Specifies if the rope constraint is rigid." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity" Name="Slider" Params="Entity, Entity, Number, Number, Vector, Vector, Number" Description="Creates a slider constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="" />
+			<Parameter DataType="Vector" Name="pos2" Description="" />
+			<Parameter DataType="Number" Name="width" Description="The width of the slider." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="Weld" Params="Entity, Entity, Number, Number, Number, Boolean" Description="Creates a weld constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Number" Name="forceLimit" Description="" />
+			<Parameter DataType="Boolean" Name="deleteOnBreak" Description="Specifies if the weld constraint is deleted on breakage." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity, Entity, Entity" Name="Winch" Params="Player, Entity, Entity, Number, Number, Vector, Vector, Number, Number, Number, Number, Number, String, Number" Description="Creates a winch constraint." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player to create the constraint for." />
+			<Parameter DataType="Entity" Name="ent1" Description="The first entity to constrain." />
+			<Parameter DataType="Entity" Name="ent2" Description="The second entity." />
+			<Parameter DataType="Number" Name="bone1" Description="The bone of the first entity to constrain." />
+			<Parameter DataType="Number" Name="bone2" Description="The bone of the second entity." />
+			<Parameter DataType="Vector" Name="pos1" Description="The first position to place the winch at." />
+			<Parameter DataType="Vector" Name="pos2" Description="The second position." />
+			<Parameter DataType="Number" Name="width" Description="The width of the winch." />
+			<Parameter DataType="Number" Name="keyForward" Description="The key to press to increase the winch." />
+			<Parameter DataType="Number" Name="keyBackward" Description="The key to press to decrease the winch." />
+			<Parameter DataType="Number" Name="forwardSpeed" Description="The speed at whch to increase." />
+			<Parameter DataType="Number" Name="backwardSpeed" Description="The speed at which to decrease." />
+			<Parameter DataType="String" Name="material" Description="The material to use for the winch." />
+			<Parameter DataType="Number" Name="toggle" Description="Specifies if the winch is togglable." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>construct</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="Entity" Name="Magnet" Params="Player, Vector, Angle, String, String, Number, Number, Number, Number, Number, Number, Number, Vector, Vector, Boolean" Description="Creates a magnet." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player to create the magnet for." />
+			<Parameter DataType="Vector" Name="pos" Description="The position of the magnet." />
+			<Parameter DataType="Angle" Name="ang" Description="The angle of the magnet." />
+			<Parameter DataType="String" Name="model" Description="The model of the magnet." />
+			<Parameter DataType="String" Name="material" Description="The material of the magnet." />
+			<Parameter DataType="Number" Name="key" Description="" />
+			<Parameter DataType="Number" Name="maxObjects" Description="" />
+			<Parameter DataType="Number" Name="strength" Description="The strength of the magnet." />
+			<Parameter DataType="Number" Name="noPull" Description="" />
+			<Parameter DataType="Number" Name="allowRotation" Description="" />
+			<Parameter DataType="Number" Name="alwaysOn" Description="Specifies if the magnet is always on." />
+			<Parameter DataType="Number" Name="toggle" Description="Specifies if the magnet is togglable." />
+			<Parameter DataType="Vector" Name="vel1" Description="" />
+			<Parameter DataType="Vector" Name="vel2" Description="" />
+			<Parameter DataType="Boolean" Name="frozen" Description="Specifies if the magnet should be frozen." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="SetPhysProp" Params="Player, Entity, Number, Boolean, Boolean, Number, Boolean, Number, Number, Number, Number, String" Description="Set's a props physical properties." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="For which player to set the physics properties." />
+			<Parameter DataType="Entity" Name="ent" Description="The entity to set." />
+			<Parameter DataType="Number" Name="bone" Description="The bone of the entity to set." />
+			<Parameter DataType="Boolean" Name="motion" Description="Specifies if the entity has motion." />
+			<Parameter DataType="Boolean" Name="gravity" Description="Specifies if the entity is affected by gravity." />
+			<Parameter DataType="Number" Name="mass" Description="The mass of the entity." />
+			<Parameter DataType="Boolean" Name="dragEnabled" Description="Specifies if the entity is affected by drag." />
+			<Parameter DataType="Number" Name="drag" Description="The amount of drag." />
+			<Parameter DataType="Number" Name="buoyancy" Description="The buoyancy of the entity." />
+			<Parameter DataType="Number" Name="rotationDamping" Description="" />
+			<Parameter DataType="Number" Name="speedDamping" Description="" />
+			<Parameter DataType="String" Name="Material" Description="The material of the entity." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>coroutine</Name>
+      <Description>Allows the creation of coroutines that allow multithreading.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="Table" Name="create" Params="nil Func()" Description="Creates a coroutine to execute a function in it's own 'thread'." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="nil Func()" Name="func" Description="The function to execute in another thread." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="resume" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="running" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="status" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="wrap" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="yield" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>debug</Name>
+      <Description>Various debugging functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="debug" Params="" Description="Enters an interactive mode with the user, running each string that the user enters. Using simple commands and other debug facilities, the user can inspect global and local variables, change their values, evaluate expressions, and so on." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="getfenv" Params="Entity" Description="Returns the environment of an object." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="gethook" Params="Thread" Description="Returns the current hook settings of the thread, as three values: the current hook function, the current hook mask, and the current hook count (as set by the debug.sethook function)." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="getinfo" Params="Thread, nil Func()" Description="Returns a table with information about a function" Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Thread" Name="thread" Description="" />
+			<Parameter DataType="nil Func()" Name="func" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="getlocal" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="getmetatable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="getregistry" Params="" Description="Returns the registry table." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="getupvalue" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="setfenv" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sethook" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="setlocal" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="setmetatable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="setupvalue" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Trace" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="traceback" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>draw</Name>
+      <Description>Handles methods for drawing.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="DrawText" Params="String, String, Number, Number, Color, Number" Description="Draws text with a specified font at a specified position." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="text" Description="The text to draw." />
+			<Parameter DataType="String" Name="font" Description="The font to draw the text in." />
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate to draw at." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate to draw at." />
+			<Parameter DataType="Color" Name="color" Description="The color to use." />
+			<Parameter DataType="Number" Name="xAlign" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="GetFontHeight" Params="String" Description="Gets the height of a font." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="font" Description="The font to get the height of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="NoTexture" Params="" Description="Sets the current texture to white." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="RoundedBox" Params="Number, Number, Number, Number, Number, Color" Description="Draws a sized rounded box at the specified position." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Number" Name="border" Description="The border size of the rounded box." />
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate of the box." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate." />
+			<Parameter DataType="Number" Name="width" Description="The width of the box." />
+			<Parameter DataType="Number" Name="height" Description="The height." />
+			<Parameter DataType="Color" Name="color" Description="The color to draw the box in." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="SimpleText" Params="String, String, Number, Number, Color, Number, Number" Description="Draws text with a specified font at a specified position." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="text" Description="The text to draw." />
+			<Parameter DataType="String" Name="font" Description="The font to draw the text in." />
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate to draw at." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate to draw at." />
+			<Parameter DataType="Color" Name="color" Description="The color to use." />
+			<Parameter DataType="Number" Name="xAlign" Description="" />
+			<Parameter DataType="Number" Name="yAlign" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="SimpleTextOutlined" Params="String, String, Number, Number, Color, Number, Number, Number, Color" Description="Draws text with an outline." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="text" Description="The text to draw." />
+			<Parameter DataType="String" Name="font" Description="The font to draw the text in." />
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate to draw at." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate to draw at." />
+			<Parameter DataType="Color" Name="color" Description="The color to use." />
+			<Parameter DataType="Number" Name="xAlign" Description="" />
+			<Parameter DataType="Number" Name="yAlign" Description="" />
+			<Parameter DataType="Number" Name="outline" Description="" />
+			<Parameter DataType="Color" Name="outlineColor" Description="The color to draw the outline in." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number, Number" Name="Text" Params="Table" Description="Draws text from a table of values." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Table" Name="text" Description="The text to draw." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number, Number" Name="TextShadow" Params="Table, Number, Number" Description="Draws text with a drop shadow behind it." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Table" Name="text" Description="The text to draw." />
+			<Parameter DataType="Number" Name="distance" Description="The distance of the shadow." />
+			<Parameter DataType="Number" Name="alpha" Description="The alpha of the shadow." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="TexturedQuad" Params="Table" Description="Draws a quad represented by a table of values." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Table" Name="quad" Description="The quad to draw." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="WordBox" Params="Number, Number, Number, String, String, Color, Color" Description="Draws text enclosed in a box." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Number" Name="border" Description="The border size of the box." />
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate to draw at." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate." />
+			<Parameter DataType="String" Name="text" Description="The text to draw." />
+			<Parameter DataType="String" Name="font" Description="The font to use." />
+			<Parameter DataType="Color" Name="boxColor" Description="The color of the box." />
+			<Parameter DataType="Color" Name="fontColor" Description="The color of the text." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>duplicator</Name>
+      <Description>Allows duplication of entities and constraints through functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="ApplyBoneModifiers" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ApplyEntityModifiers" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Copy" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CopyEntTable" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CreateConstraintFromTable" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CreateEntityFromTable" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DoFlex" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="DoGeneric" Params="Entity, Table" Description="Sets the model, position, and angle of the entity." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Entity" Name="ent" Description="The entity to set." />
+			<Parameter DataType="Table" Name="table" Description="A table of values which specify the model, position, and angle." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DoGenericPhysics" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindEntityClass" Params="String" Description="Find a table registered with duplicator.RegisterEntityClass." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="class" Description="The entity class to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GenericDuplicatorFunction" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetAllConstrainedEntitiesAndConstraints" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Paste" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="RegisterBoneModifer" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="RegisterConstraint" Params="String, nil Func(...), ..." Description="Register a function used for creating a duplicated constraint." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of a constraint to register." />
+			<Parameter DataType="nil Func(...)" Name="func" Description="A callback function for the constraint." />
+			<Parameter DaatType="valist" Name="args" Descripton="Arguments for func." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="RegisterEntityClass" Params="String, nil Func(...), ..." Description="Registers a function used for creating a duplicated entity." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="class" Description="The entity class to register." />
+			<Parameter DataType="nil Func(...)" Name="func" Description="A callback function for the entity." />
+			<Parameter DaatType="valist" Name="args" Descripton="Arguments for func." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="RegisterEntityModifier" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="StoreBoneModifier" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="StoreEntityModifier" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>effects</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Create" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Register" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>ents</Name>
+      <Description>Handles the creation and management of entities</Description>
+      <Members>
+        <Member xsi:type="Function" Return="Entity" Name="Create" Params="String" Description="Create the specified entity." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="class" Description="The entity class to create." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindByClass" Params="String" Description="Find entities of a specified type." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="String" Name="class" Description="The entity class to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindByModel" Params="String" Description="Find all entities with a specified model." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="String" Name="model" Description="The model to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindByName" Params="String" Description="Find all entities with a specified name." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Sring" Name="name" Description="The name to search for." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindInBox" Params="Vector, Vector" Description="Find all entities within a specified bounding box." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Vector" Name="boxMin" Description="The minimum bounding of the box." />
+			<Parameter DataType="Vector" Name="boxMax" Description="The maximum bounding of the box." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindInSphere" Params="Vector, Number" Description="Find all entities within a sphere of a specified radius" Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Vector" Name="center" Description="The center of the sphere." />
+			<Parameter DataType="Number" Name="radius" Description="The radius of the sphere." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="GetByIndex" Params="Number" Description="Retrieve a specified entity object by it's index." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="index" Description="The index of the entity to return." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>file</Name>
+      <Description>Handles file input/output.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="CreateDir" Params="String" Description="Create a directory." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="directory" Description="The name of the directory to create." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Delete" Params="String" Description="Delete a file or folder." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the file or folder to delete." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="Exists" Params="String" Description="Checks a file or folder for existance." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The file or folder to check." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="Find" Params="String" Description="Find a list of files within a directory." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="directory" Description="The directory to list." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindDir" Params="String" Description="Find a list of directories within a directory." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="directory" Description="The directory to list." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindInLua" Params="String" Description="Find a list of files within a Lua directory." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="directory" Description="The directory to list." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="IsDir" Params="String" Description="Checks if a filename is a folder." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name to check." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="String" Name="Read" Params="String" Description="Read a specified file." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="file" Description="The file to read." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Write" Params="String, String" Description="Write to a specified file." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="file" Description="The file to write to." />
+			<Parameter DataType="String" Name="data" Description="The data to write." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>game</Name>
+      <Description>Game related functions to get status information.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="ConsoleCommand" Params="String" Description="Runs a console command on the server." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="String" Name="GetMap" Params="" Description="Retrieve the current map name." Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="String" Name="GetMapNext" Params="" Description="Retrieve the next map name." Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="LoadNextMap" Params="" Description="Begins the next map." Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>gamemode</Name>
+      <Description>Gamemode related functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Call" Params="String, ..." Description="Called by the engine to call a gamemode." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="" />
+			<Parameter DataType="valist" Name="args" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Gamemode" Name="Get" Params="String" Description="Get a gamemode by name." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the gamemode to return." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Register" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>gmod</Name>
+      <Description>Garry's Mod related functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="Gamemode" Name="GetGamemode" Params="String, ..." Description="Gets the Current Gamemode and the functions" Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the gamemode to return." />
+			<Parameter DataType="valist" Name="args" Description="" />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>gui</Name>
+      <Description>Various functions for handling mouse control.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="Number" Name="EnableScreenClicker" Params="Boolean" Description="Enables the mouse cursor." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Boolean" Name="value" Description="Specifies if the cursor is to be enabled." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number, Number" Name="MousePos" Params="" Description="Returns the X, Y position of the mouse." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="MouseX" Params="" Description="Returns the X coordinate of the mouse." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="MouseY" Params="" Description="Returns the Y coordinate of the mouse." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Vector" Name="ScreenToVector" Params="Number, Number" Description="Returns an aim vector." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate of the screen." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate of the screen." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="SetMousePos" Params="Number, Number" Description="Sets the X, Y position of the mouse." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate of the screen." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate of the screen." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>hook</Name>
+      <Description>Allows the creation and deletion of event hooks.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Add" Params="String, String, nil Func(...)" Description="Hook an event to a function." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="hookName" Description="The name of the hook to hook." />
+			<Parameter DataType="String" Name="uniqueName" Description="The unique name of the hook to prevent multiple hooks." />
+			<Parameter DataType="nil Func(...)" Name="func" Description="The function to call when the event fires." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Call" Params="String, Gamemode, ..." Description="Called by the engine to call a gamemode hook." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the hook to call." />
+			<Parameter DataType="Gamemode" Name="gamemode" Description="The gamemode object which contains the function." />
+			<Parameter DataType="valist" Name="args" Description="Arguments for the function." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="GetTable" Params="" Description="Returns the whole table of hooks." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Remove" Params="String, String" Description="Remove a hooked function." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="hookName" Description="The name of the hook to remove." />
+			<Parameter DataType="String" Name="uniqueName" Description="The unique name of the hook to remove." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>killicon</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Add" Params="String, String, Color" Description="Adds a death notify icon to the list for display with killicon.Draw." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name to add." />
+			<Parameter DataType="String" Name="material" Description="The material to add." />
+			<Parameter DataType="Color" Name="color" Description="The color to add." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="AddAlias" Params="String, String" Description="Adds an alias to an existing death notify icon." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The existing notify icon." />
+			<Parameter DataType="String" Name="alias" Description="A new alias of the notify icon." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="AddFont" Params="String, String, String, Color" Description="Adds a death notify icon to the list for display with killicon.Draw." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name to add." />
+			<Parameter DataType="String" Name="font" Description="The font to add." />
+			<Parameter DataType="String" Name="char" Description="The character of the font." />
+			<Parameter DataType="Color" Name="color" Description="The color to add." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Draw" Params="Number, Number, String, Number" Description="Draws a death notify icon on the screen." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="Number" Name="xPos" Description="The x coordinate to draw at." />
+			<Parameter DataType="Number" Name="yPos" Description="The y coordinate to draw at." />
+			<Parameter DataType="String" Name="name" Description="The name of the notify icon to draw." />
+			<Parameter DataType="Number" Name="alpha" Description="The alpha to draw at." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number, Number" Name="GetSize" Params="String" Description="Returns the size of a death notify icon.." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="The name of the notify icon." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>language</Name>
+      <Description>Allows the addition of language placeholders.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Add" Params="String, String" Description="Adds a language item. Language placeholders are replaced with fulltext in Garry's Mod once registered with this function." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="placeHolder" Description="The placeholder which will be replaced by fullText." />
+			<Parameter DataType="String" Name="fullText" Description="The text to replace in placeHolder." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>markup</Name>
+      <Description>Handles the creation of MarkupObjects.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="MarkupObject" Name="Parse" Params="String, Number" Description="Parses html markup into a MarkupObject. Second parameter is optional." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="String" Name="markup" Description="The HTML to parse." />
+			<Parameter DataType="Number" Name="maxWidth" Description="(OPTIONAL)" />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>math</Name>
+      <Description>Mathematic related functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="Number" Name="abs" Params="Number" Description="Returns the absolute value of the first argument." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to get the absolute value of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="acos" Params="Number" Description="Returns the arc cosine of the first argument in radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to get the arc cosine of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="AngleDifference" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Approach" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ApproachAngle" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="asin" Params="Number" Description="Returns the arc sine of the first argument in radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to get the arc sine of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="atan" Params="Number" Description="Returns the arc tangent of the first argument in radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to get the arc tangent of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="atan2" Params="Number, Number" Description="Returns the arc tangent of argument one/argument two (in radians), but uses the signs of both parameters to find the quadrant of the result." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="xValue" Description="" />
+			<Parameter DataType="Number" Name="yValue" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="BinToInt" Params="String" Description="Converts a string consisting of binary into an integer." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="binary" Description="The binary string representation to convert to a number." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="BSplinePoint" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="calcBSplineN" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="ceil" Params="Number" Description="Returns value rounded up to the nearest whole number." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to round up." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="Clamp" Params="Number, Number, Number" Description="Forces a number into the specified boundaries." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to clamp." />
+			<Parameter DataType="Number" Name="lowerBound" Description="The lower bound to clamp to." />
+			<Parameter DataType="Number" Name="upperBound" Description="The upper bound to clamp to." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="cos" Params="Number" Description="Returns the cosine of the first argument in radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to get the cosine of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="cosh" Params="Number" Description="Returns the hyperbolic cosine of the first argument in radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The number to get the hyperbolic cosine of." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="deg" Params="Number" Description="Converts the first argument into radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="degs" Description="The value to convert to radians." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="Deg2Rad" Params="Number" Description="Converts the first argument into radians." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The value to convert to radians." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="Dist" Params="Number, Number, Number, Number" Description="Calculates the distance between two positions in 2D space." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="x1" Description="The x coordinate of the first position." />
+			<Parameter DataType="Number" Name="y1" Description="The y coordinate of the first position." />
+			<Parameter DataType="Number" Name="x2" Description="The x coordinate of the second position." />
+			<Parameter DataType="Number" Name="y2" Description="The y coordinate of the second position." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="Distance" Params="Number, Number, Number, Number" Description="Calculates the distance between two positions in 2D space." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="x1" Description="The x coordinate of the first position." />
+			<Parameter DataType="Number" Name="y1" Description="The y coordinate of the first position." />
+			<Parameter DataType="Number" Name="x2" Description="The x coordinate of the second position." />
+			<Parameter DataType="Number" Name="y2" Description="The y coordinate of the second position." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="EaseInOut" Params="Number, Number, Number" Description="Calculates the progress of a value from 0.0 to 1.0, taking into account easing." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="progress" Description="" />
+			<Parameter DataType="Number" Name="easeIn" Description="" />
+			<Parameter DataType="Number" Name="easeOut" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="exp" Params="Number" Description="Returns the value of the mathematical constant e to the power of the first argument." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="value" Description="The exponent." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="floor" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="fmod" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="frexp" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IntToBin" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ldexp" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="log" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="log10" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="max" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Max" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="min" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Min" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="modf" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="NormalizeAngle" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="pow" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="rad" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Rad2Deg" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Rand" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="random" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="randomseed" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Round" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sin" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sinh" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sqrt" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="tan" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="tanh" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>numpad</Name>
+      <Description>Allows toolmodes to share the numpad.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="Activate" Params="Player, _, Table, Number" Description="Activates numpad key owned by the player referred to in the last parameter." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player to activate the keypad for." />
+			<Parameter DataType="_" Name="_" Description="Must be _." />
+			<Parameter DataType="Table" Name="keys" Description="An array of strings representing which keys to activate." />
+			<Parameter DataType="Number" Name="playerIndex" Description="The index of player." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Deactivate" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="OnDown" Params="Player, String, String, ..." Description="Adds a function to call when a player presses a key on the number pad." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player object who will be able to trigger this impulse." />
+			<Parameter DataType="String" Name="key" Description="The literal keypress, or, in the case of special keys, a number constant defined in keys.lua" />
+			<Parameter DataType="String" Name="name" Description="The name of the function to call. This has been previously registered with the numpad.Register function." />
+			<Parameter DataType="valist" Name="args" Description="A list of arguments to pass to the registered function." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="OnUp" Params="Player, String, String, ..." Description="Adds a function to call when a player releases a key on the number pad." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Player" Name="player" Description="The player object who will be able to trigger this impulse." />
+			<Parameter DataType="String" Name="key" Description="The literal keypress, or, in the case of special keys, a number constant defined in keys.lua" />
+			<Parameter DataType="String" Name="name" Description="The name of the function to call. This has been previously registered with the numpad.Register function." />
+			<Parameter DataType="valist" Name="args" Description="A list of arguments to pass to the registered function." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Register" Params="String, nil Func(Player, ...)" Description="Registers a function with the numpad library for use with numpad.OnDown and numpad.OnUp." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="String" Name="name" Description="A string literal that identifies the function and must be unique from all other functions registered with numpad.Register." />
+			<Parameter DataType="nil Func(Player, ...)" Name="func" Description="The function to be called, or nil if you wish to remove the function for whatever reason. When called by the numpad library, it will be passed a reference to the player that made a key press or key release event, as well as any arguments." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Remove" Params="Number" Description="Removes an impulse previously added with a call to numpad.OnDown or numpad.OnUp." Type="SERVER">
+          <Parameters>
+			<Parameter DataType="Number" Name="index" Description="The index of the impulse that was returned by the call to numpad.OnDown or numpad.OnUp that was used to create it." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>os</Name>
+      <Description>Facilitates operating system functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="String" Name="clock" Params="" Description="Returns an approximation of the amount in seconds of CPU time used by the program." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="String/Table" Name="date" Params="String, Number" Description="Returns a string or a table containing date and time, formatted according to the given string format. Parameters optional." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="format" Description="A format string to format time with. (OPTIONAL)" />
+			<Parameter DataType="Number" Name="time" Description="The time to be formatted by format. (OPTIONAL)" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="difftime" Params="Number, Number" Description="Returns the number of seconds from one time to another." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Number" Name="time1" Description="The first time to compare." />
+			<Parameter DataType="Number" Name="time2" Description="The second time to compare." />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="String" Name="time" Params="Table" Description="Gets the current time (Seconds from the unix epoch). Parameter optional." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Table" Name="index" Description="This table must have fields: year, month, and day, and may have fields hour, min, sec, and isdst" />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>package</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="loadlib" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="seeall" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>player</Name>
+      <Description>Represents a set of functions that can be used to find players.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="Table" Name="GetAll" Params="" Description="Returns a table of all the connected players as Player objects." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Player" Name="GetByID" Params="Number" Description="Retrieve a player object based upon his userid" Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetByUniqueID" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>player_manager</Name>
+      <Description>Enumeration library that holds player models.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="TranslatePlayerModel" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>render</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddBeam" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Clear" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ClearDepth" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ClearRenderTarget" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CopyRenderTargetToTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CopyTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawBeam" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawQuad" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawQuadEasy" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawScreenQuad" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawSprite" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="EndBeam" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetBloomTex0" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetBloomTex1" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetDXLevel" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetLightColor" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetMoBlurTex0" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetMoBlurTex1" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetMorphTex0" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetMorphTex1" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetRenderTarget" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetScreenEffectTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetSuperFPTex" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetSuperFPTex2" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetSurfaceColor" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IgnoreZ" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="MaxTextureHeight" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="MaxTextureWidth" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="RenderView" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetMaterial" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetRenderTarget" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetViewPort" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="StartBeam" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SupportsHDR" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SupportsPixelShaders_1_4" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SupportsPixelShaders_2_0" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SupportsVertexShaders_2_0" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="UpdateRefractTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="UpdateScreenEffectTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>resource</Name>
+      <Description>This library allows a script to add a resource for clients to download from the server.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddFile" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>saverestore</Name>
+      <Description>This library is to help bind the engine's saverestore stuff to Lua.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddRestoreHook" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="AddSaveHook" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="LoadEntity" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="LoadGlobal" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PreRestore" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PreSave" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ReadTable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ReadVar" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SaveEntity" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SaveGlobal" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="WritableKeysInTable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="WriteTable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="WriteVar" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>schedule</Name>
+      <Description>This library enables scheduling of functions at specific time/dates.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Add" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Check" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsSchedule" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Remove" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>scripted_ents</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Get" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetList" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetStored" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetType" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Register" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>spawnmenu</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddContext" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>server_settings</Name>
+      <Description>Various functions to return variables on the server.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Bool" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Int" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>sql</Name>
+      <Description>Creates a simple interface with the built-in Gmod SQL database.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="LastError" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Query" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="QueryRow" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="QueryValue" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SQLStr" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TableExists" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>string</Name>
+      <Description>Collection of functions for manipulating strings.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="byte" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="char" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="dump" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Explode" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="find" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="format" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="FormattedTime" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetExtensionFromFilename" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetFileFromFilename" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetPathFromFilename" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="gfind" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="gmatch" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="gsub" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Implode" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Left" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="len" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="lower" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="match" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="rep" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Replace" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="reverse" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Right" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sub" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ToMinutesSeconds" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ToMinutesSecondsMilliseconds" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Trim" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="upper" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>surface</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="CreateFont" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawLine" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawOutlinedRect" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawPoly" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawRect" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawText" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawTexturedRect" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DrawTexturedRectRotated" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetHUDTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetTextSize" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetTextureID" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetTextureSize" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PlaySound" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ScreenHeight" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ScreenWidth" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetDrawColor" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetFont" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetMaterial" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetTextColor" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetTextPos" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetTexture" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>table</Name>
+      <Description>A collection of functions for manipulating tables.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Add" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="concat" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Copy" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Count" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="DeSanitise" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ForceInsert" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="foreach" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="foreachi" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="getn" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="HasValue" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Inherit" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="insert" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsSequential" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="maxn" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Merge" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="remove" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Santise" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="setn" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="sort" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SortByKey" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ToString" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>team</Name>
+      <Description>Handles teamplay options and features.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddScore" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetColor" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetName" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetPlayers" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetScore" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="NumPlayers" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetScore" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetUp" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TotalDeaths" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TotalFrags" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>timer</Name>
+      <Description>Functions for handling timers.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Adjust" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Check" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Create" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Destroy" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsTimer" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Pause" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Remove" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Simple" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Start" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Stop" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Toggle" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="UnPause" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>umsg</Name>
+      <Description>Library for building and dispatching user messages.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Angle" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Bool" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Char" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="End" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Entity" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Float" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Long" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PoolString" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Short" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Start" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="String" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Vector" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="VectorNormal" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>undo</Name>
+      <Description>Allows access to the undo feature.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddEntity" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="AddFunction" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Create" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Do_Undo" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Finish" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="MakeUIDirty" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ReplaceEntity" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetPlayer" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="SetupUI" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>usermessage</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Hook" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IncomingMessage" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>util</Name>
+      <Description>General utility library, containing many useful functions.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="BlastDamage" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="CRC" Params="Object" Description="Takes a string, table, float or integer and transforms it into an integer that can be used to identify the input. Useful for identifying things or hashing." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="Object" Name="obj" Description="An object to calculate a checksum for" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Decal" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Effect" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetPixelVisibleHandle" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetPlayerTrace" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetSunInfo" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetSurfaceIndex" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsInWorld" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsValidModel" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsValidPhysicsObject" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsValidProp" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsValidRagdoll" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="KeyValuesToTable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="LocalToWorld" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PixelVisible" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PrecacheModel" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PrecacheSound" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="QuickTrace" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="RelativePathToFull" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ScreenShake" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TableToKeyValues" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="tobool" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TraceEntity" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TraceEntityHull" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="TraceLine" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>vehicles</Name>
+      <Description>Manages vehicle creation and definition.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="AddVehicle" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetTable" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="PlayerSpawn" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="RefreshList" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="ReloadFiles" Params="" Description="" Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>vgui</Name>
+      <Description>Allows simple access to the Valve GUI environment.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Create" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CreateX" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="CursorVisible" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetWorldPanel" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="IsHoveringWorld" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Register" Params="" Description="" Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>weapons</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Function" Return="" Name="Get" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetList" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="GetStored" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="" Name="Register" Params="" Description="" Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>global</Name>
+      <Description>Global functions, not in any library.</Description>
+      <Members>
+        <Member xsi:type="Function" Return="nil" Name="AddCSLuaFile" Params="String" Description="Used to send lua files to client." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="ConVarExists" Params="String" Description="Used to check if a convar exists, so as to not create it over again and overwrite existing values." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="ConVar" Name="CreateClientConVar" Params="String, String, Boolean, Boolean" Description="Creates a clientside console variable." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="CreateConVar" Params="String, String, Table" Description="Used for the creation of convars." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="CurTime" Params="" Description="Gets the current time in seconds since server start. Mainly used for timers." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="DeriveGamemode" Params="String" Description="Instructs Garry's Mod to derive the current gamemode from another." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Entity" Name="Entity" Params="Number" Description="Mainly used for debugging code in the console, retrieves an entity object based upon it's entindex. Works in exactly the same way as ents.GetByIndex and works with any entity type." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="FindMetaTable" Params="String" Description="Returns a metatable by  name." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="FrameTime" Params="" Description="Returns the time taken to render the last video frame." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="GetConVarNumber" Params="String" Description="Returns the value of a specified console-variable." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="String" Name="GetConVarString" Params="String" Description="Returns the value of a specified console-variable." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="GetGlobalInt" Params="String" Description="Gets a global int, set with SetGlobalInt." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="RenderTarget" Name="GetRenderTarget" Params="String, Number, Number, Boolean" Description="Creates a new RenderTarget, which can be used to seperately draw on." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="include" Params="String" Description="Includes another file into an existing script." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="isDedicatedServer" Params="" Description="Returns true if the code is being run on a dedicated server." Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="isLinux" Params="" Description="Returns true if the code is being run on linux." Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Player" Name="LocalPlayer" Params="" Description="Returns the player object of the client the script is running on." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Table" Name="Material" Params="String" Description="Opens and reads the given filepath and converts into table, to use with material settings such as render.SetMaterial must be a usable format, give filename without an extension to use." Type="CLIENT">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="MaxPlayers" Params="" Description="Returns the maximum number of players that can be in the game." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="Msg" Params="String" Description="Prints a message to the console. Mainly used for debugging purposes." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="MsgAll" Params="String" Description="Prints a message to the console of every connected player. Mainly used for debugging purposes." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="RecipientFilter" Name="RecipientFilter" Params="" Description="Used with user messages, to limit which player may recive a message." Type="SERVER">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="require" Params="String" Description="Adds functions from an external dll." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="ScrH" Params="" Description="Returns the height of the currently used resolution." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Number" Name="ScrW" Params="" Description="Fetches the width of the currently used resolution." Type="CLIENT">
+          <Parameters>
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="nil" Name="SetGlobalInt" Params="String, Number" Description="Sets a global interger along with a index." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="" Name="" Description="" />
+			<Parameter DataType="" Name="" Description="" />
+		  </Parameters>
+        </Member>
+        <Member xsi:type="Function" Return="Boolean" Name="SinglePlayer" Params="" Description="Returns a boolean value depending on whether or not the current game is in single player mode." Type="SHARED">
+          <Parameters>
+		  </Parameters>
+        </Member>
+		<Member xsi:type="Function" Return="Sound" Name="Sound" Params="String" Description="Precaches and returns a sound object." Type="SHARED">
+          <Parameters>
+			<Parameter DataType="String" Name="soundFile" Description="The sound to load." />
+		  </Parameters>
+        </Member>
+      </Members>
+    </Library>
+    <Library>
+      <Name>ENT</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Property" DataType="Boolean" Name="AdminSpawnable" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="Author" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="Base" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="Contact" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="PrintName" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Boolean" Name="Spawnable" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="Type" Description="" Type="SHARED" />
+      </Members>
+    </Library>
+    <Library>
+      <Name>SWEP</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Property" DataType="Boolean" Name="AdminSpawnable" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="Author" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Boolean" Name="AutoSwitchFrom" Description="" Type="SERVER" />
+        <Member xsi:type="Property" DataType="Boolean" Name="AutoSwitchTo" Description="" Type="SERVER" />
+        <Member xsi:type="Property" DataType="String" Name="Base" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Boolean" Name="CSMuzzleFlashes" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="String" Name="Contact" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Boolean" Name="DrawAmmo" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Boolean" Name="DrawCrosshair" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="String" Name="HoldType" Description="" Type="SERVER" />
+        <Member xsi:type="Property" DataType="String" Name="IconLetter" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="String" Name="Instructions" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Vector" Name="IronSightsAng" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Vector" Name="IronSightsPos" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Table" Name="Primary" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="PrintName" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="Purpose" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Table" Name="Secondary" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="Slot" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Number" Name="SlotPos" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Boolean" Name="Spawnable" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="String" Name="ViewModel" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="ViewModelFOV" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Number" Name="ViewModelFlip" Description="" Type="CLIENT" />
+        <Member xsi:type="Property" DataType="Number" Name="Weight" Description="" Type="SERVER" />
+        <Member xsi:type="Property" DataType="String" Name="WorldModel" Description="" Type="SHARED" />
+      </Members>
+    </Library>
+    <Library>
+      <Name>SWEP.Primary</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Property" DataType="String" Name="Ammo" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Boolean" Name="Automatic" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="ClipSize" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Float" Name="Cone" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="Damage" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="DefaultClip" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Float" Name="Delay" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="NumShots" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Float" Name="Recoil" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Sound" Name="Sound" Description="" Type="SHARED" />
+      </Members>
+    </Library>
+    <Library>
+      <Name>SWEP.Secondary</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Property" DataType="String" Name="Ammo" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Boolean" Name="Automatic" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="ClipSize" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Float" Name="Cone" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="Damage" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="DefaultClip" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Float" Name="Delay" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Number" Name="NumShots" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Float" Name="Recoil" Description="" Type="SHARED" />
+        <Member xsi:type="Property" DataType="Sound" Name="Sound" Description="" Type="SHARED" />
+      </Members>
+    </Library>
+    <Library>
+      <Name>EFFECT</Name>
+      <Description />
+      <Members>
+        <Member xsi:type="Property" DataType="Material" Name="Mat" Description="" Type="SHARED" />
+      </Members>
+    </Library>
+  </Libraries>
+  <Overrides>
+	<Override>
+		<Name>GM</Name>
+		<Description />
+		<Functions>
+			<Function Return="nil" Name="CalcView" Params="Player, Vector, Angle, Number" Description="Allows override of the default view." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="Player" Name="player" Description="The plyer to override." />
+					<Parameter DataType="Vector" Name="origin" Description="The origin of the view." />
+					<Parameter DataType="Angle" Name="angles" Description="The angle of the view." />
+					<Parameter DataType="Number" Name="fov" Description="The field of view of the view." />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="CanTool" Params="Player, Trace, String" Description="Allow/Disallow certain tool modes." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ChatText" Params="Number, String, String" Description="Called when a player types and enters a text message." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ChatTextChanged" Params="String" Description="Called whenever the content of the user's chat input box is changed." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ContextMenuOpen" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ContextScreenClick" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="CreateMove" Params="UserCmd" Description="Allows you to change the players movements before they're sent to the server." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="DoPlayerDeath" Params="Player, Entity, Player" Description="Called whenever a player dies." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="EntityKeyValue" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="EntityTakeDamage" Params="Entity, Entity, Player, Number" Description="Calls when an entity has taken damage." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="FinishMove" Params="Player, MoveData" Description="Called after a move." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GUIMouseDoublePressed" Params="MouseCode" Description="Called when the player double-clicks the mouse (when the cursor is visible)." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GUIMousePressed" Params="MouseCode" Description="Called when the player presses a mouse button (when the cursor is visible)." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GUIMouseReleased" Params="MouseCode" Description="Called when the player releases a mouse button (when the cursor is visible)." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GetGameDescription" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="Table" Name="GetSENTMenu" Params="" Description="Returns a list of SENTs." Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="Table" Name="GetSWEPMenu" Params="" Description="Returns a list of SWEPs." Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GetVehicles" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GravGunPickupAllowed" Params="Player, Entity" Description="Called when a player picks up an entity with the gravity, can be allowed or disallowed." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GravGunOnPickedUp" Params="Player, Entity" Description="Called when the gravity gun picks up an entity." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GravGunOnDropped" Params="Player, Entity" Description="Called when the gravity gun releases an object, either dropping or launching it." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="GravGunPunt" Params="Player, Entity" Description="Determine whether or not you want to allow users to 'punt' items with the Gravity gun." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="HUDAmmoPickedUp" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="HUDDrawScoreboard" Params="" Description="Main drawing event for the score board." Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="HUDPaint" Params="" Description="Used to draw things on your screen." Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="HUDPaintBackground" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="HUDShouldDraw" Params="String" Description="A string containing the name of the hud object checking to see if it can be displayed." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="HUDWeaponPickedUp" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="Initialize" Params="" Description="Called when the gamemode loads and starts" Type="SHARED" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="InitPostEntity" Params="" Description="Called after the gamemode and map load and start." Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="KeyPress" Params="Player, Key" Description="Runs when a key has been pressed." Type="SHARED" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="KeyRelease" Params="Player, Key" Description="Runs when a key has been released." Type="SHARED" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="Move" Params="Player, MoveData" Description="Called when movement is performed. Return true to completely override." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="OnChatTab" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="OnNPCKilled" Params="NPC, Entity, Entity" Description="Called whenever an NPC is killed." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="OnPhysgunFreeze" Params="Entity, PhysObj, Entity, Player" Description="Called when a player freezes an entity with the Physgun." Type="CLIENT" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="PlayerNoClip" Params="Player" Description="Called when a player enables noclip" Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PhysgunPickup" Params="Player, Entity" Description="Called when a player picks up an entity with the Physgun." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PhysgunDrop" Params="Player, Entity" Description="Called when a player drops an entity with the Physgun." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="PlayerBindPress" Params="Player, String" Description="Runs when a bind has been pressed, return true to override." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="PlayerCanPickupWeapon" Params="Player, Entity" Description="Hook this to override whether the player can pick weapons up, return true to override." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerConnect" Params="String, String, String" Description="Called whenever a player connects." Type="SHARED" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerDeath" Params="Player, Entity, Player" Description="Called whenever a player dies." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerDeathThink" Params="Player" Description="Is executed every server frame a player is dead." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerDisconnected" Params="Player" Description="Called whenever a player disconnects." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerHurt" Params="Player, Entity" Description="Called when a player has taken damage." Type="SHARED" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerInitialSpawn" Params="Player" Description="Called whenever a player spawns for the first time in a server." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerLoadout" Params="Player" Description="Called to give players the default set of weapons." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSay" Params="Player, String, Boolean" Description="Called when a player types and enters a text message." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="Entity" Name="PlayerSelectSpawn" Params="Player" Description="Called whenever a player dies and needs to respawn." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSetModel" Params="Player" Description="Called whenever a player spawns and must choose a model." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="PlayerShouldTakeDamage" Params="Player, Entity" Description="Called whenever a player gets hurt. Return true to take damage, false to ignore it." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawn" Params="Player" Description="Called whenever a player respawns." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnedEffect" Params="Player, String, Entity" Description="Called when a player spawned an effect." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnedProp" Params="Player, String, Entity" Description="Called when a player has already spawned a prop." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnedNPC" Params="Player, NPC" Description="Called when a player spawned a NPC." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnedVehicle" Params="Player, Entity" Description="Called when a player has already spawned a vehicle." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnedSENT" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnedRagdoll" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnEffect" Params="Player, String" Description="Called when a player spawns an effect, return false to prevent spawning." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnObject" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnProp" Params="Player, String" Description="Called when a player spawns a prop, return false to prevent spawning." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnNPC" Params="Player, String, String" Description="Called when a player spawns an NPC, return false to prevent spawning." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnVehicle" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerSpawnRagdoll" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerTraceAttack" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PlayerUse" Params="Player, Entity" Description="Triggered when a player uses something." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PostDrawOpaque" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PostDrawTranslucent" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PostProcessPermitted" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PostRenderVGUI" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PreDrawOpaque" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PreDrawTranslucent" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="PropBreak" Params="Entity, Entity" Description="Called whenever a prop is destroyed." Type="SHARED" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="RenderScene" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="RenderScreenscapeEffects" Params="" Description="" Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="OnNPCKilled" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="OnPhysgunFreeze" Params="" Description="" Type="SERVER" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="SetPlayerAnimation" Params="Player, Animation" Description="Sets the player's animation." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="DamageInfo" Name="ScaleNPCDamage" Params="NPC, HitGroup, DamageInfo" Description="Modifies the damage received by an NPC." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="DamageInfo" Name="ScalePlayerDamage" Params="Player, HitGroup, DamageInfo" Description="Modifies the damage received by a player." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="SetupMove" Params="Player, MoveData" Description="Called before the engine process movements." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ShowHelp" Params="Player" Description="Called when the player presses their F1 key." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ShowSpare1" Params="Player" Description="Called when the player presses their F3 key." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ShowSpare2" Params="Player" Description="Called when the player presses their F4 key." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ShowTeam" Params="Player" Description="Called when the player presses their F2 key." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="ShutDown" Params="" Description="Called when the server or client shuts down." Type="SHARED" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="Boolean" Name="SpawnMenuOpen" Params="" Description="Called when a player opens the Spawn Menu, return false to disallow the menu to open." Type="CLIENT" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="Think" Params="" Description="Called every frame." Type="SHARED" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="UpdateAnimation" Params="" Description="" Type="SHARED" >
+				<Parameters>
+				</Parameters>
+			</Function>
+			<Function Return="nil" Name="WeaponEquip" Params="Weapon" Description="Called when a player selects a weapon." Type="SERVER" >
+				<Parameters>
+					<Parameter DataType="" Name="" Description="" />
+				</Parameters>
+			</Function>
+		</Functions>
+	</Override>
+  </Overrides>
+  <Keywords>
+	<string>function</string>
+	<string>end</string>
+	<string>if</string>
+	<string>then</string>
+	<string>else</string>
+	<string>elseif</string>
+	<string>while</string>
+	<string>do</string>
+	<string>for</string>
+	<string>and</string>
+	<string>in</string>
+	<string>repeat</string>
+	<string>break</string>
+	<string>false</string>
+	<string>local</string>
+	<string>return</string>
+	<string>nil</string>
+	<string>not</string>
+	<string>true</string>
+	<string>or</string>
+	<string>self</string>
+  </Keywords>
+</CodeProvider>

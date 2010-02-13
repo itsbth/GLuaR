@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="Lua" Startblock="Lua Code">
+<FileTypes>
+	<FileType Extension=".lua" Name="Lua code file"/>
+</FileTypes>
+	<Block Name="Lua Code" Style="Lua Code" EscapeChar="" IsMultiline="true">
+		<Scope Start="while" End="end" Style="Lua Region" Text="" CauseIndent="true" />
+		<Scope Start="for " End="end" Style="Lua Region" Text="" CauseIndent="true" />
+		<Scope Start="if" End="end" Style="Lua Region" Text="" CauseIndent="true" />
+    <Scope Start="do" End="end" Style="Lua Region" Text="" CauseIndent="true" />
+		<Scope Start="function" End="end" Style="Lua Region" Text="function" DefaultExpanded="false" />
+		<Bracket Start="(" End=")" Style="Lua Code" />
+		<Bracket Start="[" End="]" Style="Lua Code" />
+		<Bracket Start="{" End="}" Style="Lua Code" />
+		<!-- Keywords that can exist inside this block -->
+		<Keywords>
+			<PatternGroup Name="Keywords" Style="Lua Keyword" CaseSensitive="true">
+				<Patterns>
+					string table file util local arg ...
+				</Patterns>
+			</PatternGroup>
+			<PatternGroup Name="Flow" Style="Lua Region" CaseSensitive="true">
+				<Patterns>
+then elseif else return do in _VERSION assert collectgarbage dofile error gcinfo loadfile loadstring print tonumber tostring type unpack _ALERT _ERRORMESSAGE _INPUT _PROMPT _OUTPUT _STDERR _STDIN _STDOUT call dostring foreach foreachi getn globals newtype rawget rawset require sort tinsert tremove _G getfenv getmetatable ipairs loadlib next pairs pcall rawegal rawget rawset require setfenv setmetatable xpcall string coroutine math os
+				</Patterns>
+			</PatternGroup>
+			<PatternGroup Name="Numbers" Style="Lua Number">
+				<Pattern Text="(0x[0-9a-fA-F]+)" IsComplex="true" />
+				<Pattern Text="([0-9]+)" IsComplex="true" />
+			</PatternGroup>
+			<PatternGroup Name="TF" Style="Lua Datatype">
+				<Patterns>
+					true false nil CLIENT SERVER SWEP ENT STOOL
+				</Patterns>
+			</PatternGroup>
+      <!-- This could be done better -->
+			<PatternGroup Name="GMOD" Style="GMOD">
+				<Patterns>
+cam.End2D cam.End3D cam.End3D2D cam.EndCameraPos cam.EndOrthoView cam.Start2D cam.Start3D cam.Start3D2D cam.StartCameraPos cam.StartOrthoView cleanup.Register cleanup.UpdateUI concommand.Add concommand.AutoComplete concommand.Remove concommand.Run debug.debug debug.getfenv debug.gethook debug.getinfo debug.getlocal debug.getmetatable debug.getregistry debug.getupvalue debug.setfenv debug.sethook debug.setlocal debug.setmetatable debug.setupvalue debug.traceback draw.DrawText draw.GetFontHeight draw.NoTexture draw.RoundedBox draw.SimpleText draw.SimpleTextOutlined draw.Text draw.TextShadow draw.TexturedQuad draw.WordBox duplicator.RegisterConstraint duplicator.RegisterEntityBoneModifier duplicator.RegisterEntityClass duplicator.RegisterEntityModifier effects.Create effects.Register ents.Create ents.GetByIndex file.CreateDir file.Delete file.Exists file.Find file.FindInLua file.IsDir file.Read file.Write gamemode.Call gamemode.Get gamemode.Register gmod.BroadcastLua gmod.entCallGamemode gmod.GetGamemode gui.EnableScreenClicker gui.MousePos gui.MouseX gui.MouseY gui.ScreenToVector gui.SetMousePos hook.Add hook.Call hook.Remove killicon.Add killicon.AddAlias killicon.AddFont killicon.Draw killicon.GetSize markup.Parse package.loadlib package.seeall player.GetAll player.GetByID player_manager.TranslatePlayerModel render.AddBeam render.Clear render.ClearRenderTarget render.CopyRenderTargetToTexture render.CopyTexture render.DrawBeam render.DrawQuad render.DrawQuadEasy render.DrawScreenQuad render.DrawSprite render.EndBeam render.GetBloomTex0 render.GetBloomTex1 render.GetDXLevel render.GetLightColor render.GetMoBlurTex0 render.GetMorphTex0 render.GetMorphTex1 render.GetRenderTarget render.GetSurfaceColor render.IgnoreZ render.MaxTextureHeight render.MaxTextureWidth render.RenderView render.SetMaterial render.SetRenderTarget render.SetViewPort render.StartBeam render.SupportR render.SupportsPixelShaders_1_4 render.SupportsPixelShaders_2_0 render.SupportsVertexShaders_2_0 render.UpdateRefractTexture render.UpdateScreenEffectTexture saverestore.AddRestoreHook saverestore.AddSaveHook saverestore.LoadEntity saverestore.LoadGlobal saverestore.PreRestore saverestore.PreSave saverestore.ReadTable saverestore.ReadVar saverestore.SaveEntity saverestore.SaveGlobal saverestore.WritableKeysInTable saverestore.WriteTable saverestore.WriteVar schedule.Add schedule.Check schedule.IsSchedule schedule.Remove scripted_ents.Get scripted_ents.GetList scripted_ents.GetStored scripted_ents.GetType scripted_ents.Register surface.CreateFont surface.DrawLine surface.DrawOutlinedRect surface.DrawPoly surface.DrawRect surface.DrawText surface.DrawTexturedRect surface.DrawTexturedRectRotated surface.GetHUDTexture surface.GetTextSize surface.GetTextureID surface.GetTextureSize surface.PlaySound surface.ScreenHeight surface.ScreenWidth surface.SetDrawColor surface.SetFont surface.SetTextColor surface.SetTextPos surface.SetTexture team.AddScore team.GetColor team.GetName team.GetPlayers team.GetScore team.NumPlayers team.SetColor team.SetName team.SetScore team.SetUp team.TotalDeaths team.TotalFrags timer.Adjust timer.Check timer.Create timer.Destroy timer.IsTimer timer.Pause timer.Remove timer.Simple timer.Start timer.Stop timer.Toggle timer.UnPause usermessage.Hook usermessage.IncomingMessage util.BlastDamage util.Decal util.Effect util.GetPixelVisibleHandle util.GetPlayerTrace util.GetSunInfo util.GetSurfaceIndex util.IsValidModel util.IsValidPhysicsObject util.IsValidProp util.IsValidRagdoll util.KeyValuesToTable util.LocalToWorld util.PixelVisible util.PrecacheModel util.PrecacheSound util.QuickTrace util.ScreenShake util.TableToKeyValues util.tobool util.TraceEntity util.TraceLine vehicles.Add vehicles.GetTable vehicles.RefreshList vgui.Create vgui.CursorVisible vgui.GetWorldPanel vgui.IsHoveringWorld weapons.Get weapons.GetList weapons.GetStored weapons.Register __add __gc __index __mul __newindex __sub __tostring Forward Right RotateAroundAxis Up ReadBool ReadChar ReadEntity ReadFloat ReadLong ReadShort ReadString ReadVector ReadVectorNormal Reset AddControl AddDefaultControls AddHeader ClearControls GetEmbeddedPanel GetPanel GetAmmoType GetAttacker GetBaseDamage GetDamage GetDamageForce GetDamagePosition GetInflictor GetMaxDamage GetReportedPosition IsBulletDamage IsExplosionDamage IsFallDamage GetAngle GetAttachment GetEntity GetMagnitude GetNormal GetOrigin GetRadius GetScale GetStart GetSurfaceProp SetAngle SetAttachment SetEntity SetMagnitude SetNormal SetOrigin SetRadius SetScale SetStart SetSurfaceProp __concat __eq Activate AlignAngles BoundingRadius DrawModel DrawShadow EmitSound EntIndex EyeAngles EyePos FireBullets GetActivity GetAngles GetClass GetCollisionGroup GetColor GetFlexBounds GetFlexName GetFlexNum GetFlexScale GetFlexWeight GetForward GetGroundEntity GetLocalAngles GetMaterial GetMaxHealth GetModel GetMoveCollide GetMoveType GetNetworkedBool GetNetworkedEntity GetNetworkedFloat GetNetworkedInt GetNetworkedString GetNetworkedVector GetNWBool GetNWEntity GetNWFloat GetNWInt GetNWString GetNWVector GetOwner GetParent GetParentPhysNum GetPhysicsObject GetPhysicsObjectCount GetPhysicsObjectNum GetPos GetPoseParameter GetRenderBounds GetRight GetSequence GetSkin GetSolid GetTable GetUp GetVar GetVelocity GibBreakent GibBreakServer Health InitializeAsentEntity IsNPC IsOnGround IsPlayer IsValid IsVehicle IsWeapon IsWorld LocalToWorld LookupAttachment LookupSequence NearestPoint NextThink OBBCenter OBBMaxs OBBMins OnGround PhysicsInit PhysicsInitBox PhysicsInitShadow PhysicsInitSphere Remove ResetSequence ResetSequenceInfo RestartGesture SelectWeightedSequence SetAngles SetCollisionBounds SetCollisionBoundsWS SetCollisionGroup SetColor SetCycle SetElasticity SetEyeTarget SetFlexScale SetFlexWeight SetFriction SetHealth SetKeyValue SetLocalAngles SetMaterial SetModel SetModelName SetMoveType SetNetworkedBool SetNetworkedEntity SetNetworkedFloat SetNetworkedInt SetNetworkedString SetNetworkedVector SetNoDraw SetNotSolid SetNWBool SetNWEntity SetNWFloat SetNWInt SetNWString SetNWVector SetParent SetParentPhysNum SetPlaybackRate SetPos SetPoseParameter SetRenderBounds SetRenderBoundsWS SetRenderMode SetSequence SetShouldDrawInViewMode SetSkin SetSolid SetTable SetVar Spawn StartMotionController StopMotionController StopSound WaterLevel Weapon_SetActivity Weapon_TranslateActivity WorldSpaceAABB WorldToLocal GetMaterialFloat GetMaterialInt GetMaterialTexture GetName SetMaterialFloat SetMaterialInt SetMaterialTexture SetMaterialVector GetConstraintRadius GetForwardSpeed GetMaxentSpeed GetMaxSpeed GetMoveAngles GetSideSpeed GetUpSpeed SetConstraintRadius SetForwardSpeed SetMaxentSpeed SetMaxSpeed SetMoveAngles SetSideSpeed SetUpSpeed SetVelocity DoModal GetClassName GetMinimumSize GetSize IsVisible LoadControlsFromFile LoadControlsFromString MakePopup MouseCapture PostMessage SetActionFunction SetAutoDelete SetCommand SetEnabled SetKeyboardInputEnabled SetKeyBoardInputEnabled SetMinimumSize SetMouseInputEnabled SetName SetPaintFunction SetSize SetText SetVisible GetDieTime GetEndAlpha GetEndSize GetLifeTime GetRoll GetRollDelta GetStartAlpha GetStartSize SetDieTime SetEndAlpha SetEndSize SetLifeTime SetRoll SetRollDelta SetStartAlpha SetStartSize VelocityDecay Add Finish AddAngleVelocity AddVelocity ApplyForceCenter ApplyForceOffset CalculateForceOffset CalculateVelocityOffset ComputeShadowControl EnableCollisions EnableDrag EnableGravity EnableMotion GetAngleVelocity GetDamping GetEnergy GetInertia GetInvInertia GetInvMass GetMass GetMassCenter GetRotDamping GetSpeedDamping IsAsleep IsMoveable LocalToWorldVector OutputDebugInfo SetAngleDragCoefficient SetBuoyancyRatio SetDamping SetDragCoefficient SetInertia SetMass SetVelocityInstantaneous Sleep UpdateShadow Wake WorldToLocalVector AddCleanup AddCount AddFrozenPhysicsObject AddPlayerOption Alive Armor ChatPrint ConCommand Crouching Deaths DebugInfo Frags Freeze GetActiveWeapon GetAimVector GetAmmoCount GetentsideVehicle GetCount GetCurrentCommand GetCursorAimVector GetEyeTrace GetFOV GetInfo GetScriptedVehicle GetShootPos GetVehicle GetViewModel InVehicle IsAdmin IsSuperAdmin IsUserGroup KeyDown KeyDownLast KeyPressed KeyReleased LagCompensation LastHitGroup LimitHit MuzzleFlash Name Nick Ping PreferredModel PrintMessage RemoveAmmo ScreenText SetAnimation SetentsideVehicle SetEyeAngles SetScriptedVehicle SetUserGroup Team UnfreezePhysicsObjects ViewPunch EndBlock ReadAngle ReadInt StartBlock WriteAngle WriteBool WriteEntity WriteFloat WriteInt WriteString WriteVector Download GetActualHeight GetActualWidth GetMappingHeight GetMappingWidth IsError GetForwardMove GetMouseX GetMouseY GetSideMove GetUpMove GetViewAngles SetForwardMove SetMouseX SetMouseY SetSideMove SetUpMove SetViewAngles __div Angle Cross Distance Dot DotProduct GetNormalized Length Mul Normalize Sub ToScreen CallOnent p1 p2 DefaultReload GetPrimaryAmmoType GetPrintName GetSecondaryAmmoType IsCarriedByLocalPlayer SendWeaponAnim Setp1 Setp2 SetNextPrimaryFire SetNextSecondaryFire cleanup.Add cleanup.CC_AdminCleanup cleanup.CC_Cleanup constraint.AddConstraintTable constraint.AdvBallsocket constraint.Axis constraint.Ballsocket constraint.CanConstrain constraint.CreateKeyframeRope constraint.Elastic constraint.Hydraulic constraint.Keepupright constraint.Motor constraint.Muscle constraint.NoCollide constraint.Pulley constraint.RemoveAll constraint.RemoveConstraints constraint.Rope constraint.Slider constraint.Weld constraint.Winch construct.Magnet construct.SetPhysProp duplicator.Copy duplicator.GetEnts duplicator.MakeProp duplicator.MakeRagdoll duplicator.MakeVehicle duplicator.Paste ents.FindByClass ents.FindByModel ents.FindByName ents.FindInBox ents.FindInSphere game.ConsoleCommand game.GetMap game.GetMapNext game.LoadNextMap gmod.ClientCallGamemode numpad.Activate numpad.Deactivate numpad.OnDown numpad.OnUp numpad.Register numpad.Remove server_settings.Bool server_settings.Int umsg.Bool umsg.End umsg.Entity umsg.Float umsg.Long umsg.PoolString umsg.Short umsg.Start umsg.String umsg.Vector umsg.VectorNormal undo.AddEntity undo.Create undo.Finish undo.SetPlayer util.IsInWorld vehicles.AddVehicle vehicles.PlayerSpawn vehicles.ReloadFiles DeleteOnRemove Disposition DontDeleteOnRemove DropToFloor Extinguish Fire GetPhysicsAttacker GibBreakClient Ignite Input IsInWorld IsOnFire IsPlayerHolding PointAtEntity Respawn SetGravity SetGroundEntity SetLocalVelocity SetMaxHealth SetMoveCollide SetOwner SetPhysConstraintObjects SetPhysicsAttacker SetSolidMask SetTrigger SetUseType TakePhysicsDamage GetMaxClientSpeed SetMaxClientSpeed AddEntityRelationship AddRelationship AlertSound ClearEnemyMemory ExitScriptedSequence FearSound FoundEnemySound GetEnemy GetTarget IdleSound LostEnemySound MarkEnemyAsEluded MoveOrder PlayScene PlaySentence SentenceStop SetEnemy SetLastPosition SetSchedule SetTarget TargetOrder AddDeaths AddFrags AllowImmediateDecalPainting AttackDisable AttackEnable CreateRagdoll CrosshairDisable CrosshairEnable DetonateTripmines DrawViewModel DrawWorldModel EnterVehicle EquipSuit ExitVehicle Flashlight GetClientsideVehicle GetViewEntity GetWeapon Give GiveAmmo GodDisable GodEnable HasWeapon IPAddress IsConnected IsListenServerHost Kill KillSilent Lock PacketLoss SelectWeapon SendHint SendLua SetArmor SetChaseCamDistance SetClientsideVehicle SetDeaths SetDeathTime SetFOV SetFrags SetNoTarget SetSuppressPickupNotices SetTeam SetViewEntity ShouldDropWeapon SnapEyeAngles Spectate SpectateEntity SprintDisable SprintEnable SteamID StopZooming StripAmmo StripWeapon StripWeapons SuppressHint TakeDamage TimeConnected UniqueID UnLock UnSpectate UserID AddAllPlayers AddPlayer AddPVS RemoveAllPlayers RemovePlayer RemovePVS GetDriver GetPassenger CallOnClient Clip1 Clip2 SetClip1 SetClip2
+				</Patterns>
+			</PatternGroup>
+				
+		</Keywords>
+		<!-- Operators that can exist inside this block -->
+		<Operators>
+			<PatternGroup name="Operators" Style="Lua Operator">
+				<Pattern Text="." />
+				<Pattern Text="!" />
+				<Pattern Text=":" />
+				<Pattern Text="^" />
+				<Pattern Text="*" />
+				<Pattern Text="/" />
+				<Pattern Text="+" />
+				<Pattern Text="-" />
+				<Pattern Text="=" />
+				<Pattern Text="#" />
+				<Pattern Text=" and " />
+				<Pattern Text=" or " />
+				<Pattern Text=" not " />
+			</PatternGroup>
+		</Operators>
+		<!-- Blocks that can exist inside this block -->
+		<ChildBlocks>
+			<Child Name="Lua Multiline Comment" />
+			<Child Name="Lua Singleline Comment" />
+			<Child Name="Lua String" />
+			<Child Name="Lua Char" />
+			<Child Name="Lua Literal String" />
+			<Child Name="Lua Literal Char" />
+			<Child Name="Lua Code" />
+		</ChildBlocks>
+	</Block>
+	<!-- this block is the xml tags in xml comments-->
+	<Block Name="Lua Multiline Comment" Style="Lua Comment" EscapeChar="" IsMultiline="true">
+		<Scope Start="/*" End="*/" Style="Lua Comment" Text="/*...*/"/>
+		<Scope Start="--[[" End="]]" Style="Lua Comment" Text="--[[...]]"/>
+		<Operators>
+			<PatternGroup name="URL" Style="Lua URL">
+				<Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+			</PatternGroup>
+			<PatternGroup name="STEAMID" Style="SteamID">
+				<Pattern Text="STEAM_\d:\d:\d+" IsComplex="true" />
+			</PatternGroup>
+			<PatternGroup name="Tag" Style="Tag">
+				<Pattern Text="(TODO|HACK|FIXME):" IsComplex="true" />
+			</PatternGroup>
+		</Operators>
+	</Block>
+	<Block Name="Lua Singleline Comment" Style="Lua Comment" EscapeChar="" IsMultiline="false">
+		<Scope Start="//" End="" Style="Lua Comment" />
+		<Scope Start="--" End="" Style="Lua Comment" />
+	</Block>
+	<Block Name="Lua String" Style="Lua String" EscapeChar="\" IsMultiline="false">
+		<Scope Start="&quot;" End="&quot;" EscapeChar="\" Style="Lua String" />
+		<Scope Start="'" End="'"  EscapeChar="\" Style="Lua String" />
+		<Scope Start="[[" End="]]"  EscapeChar="\" Style="Lua String" />
+		<Operators>
+			<PatternGroup name="STEAMID" Style="SteamID">
+				<Pattern Text="STEAM_0:\d:\d+" IsComplex="true" />
+			</PatternGroup>
+			<PatternGroup name="URL" Style="Lua URL">
+				<Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+			</PatternGroup>
+		</Operators>
+	</Block>
+
+	<Style Name="Lua Code" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Lua Scope" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Lua Region" ForeColor="blue" BackColor="" Bold="true" Italic="false" Underline="false" />>
+	<Style Name="Lua Comment" ForeColor="Green" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Lua String" ForeColor="SteelBlue" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Lua Number" ForeColor="Teal" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="Lua Operator" ForeColor="Red" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Lua Keyword" ForeColor="Blue" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Lua Datatype" ForeColor="DarkBlue" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="Lua URL" ForeColor="Blue" BackColor="" Bold="false" Italic="false" Underline="true" />
+	<Style Name="SteamID" ForeColor="Blue" BackColor="" Bold="false" Italic="true" Underline="false" />
+	<Style Name="GMOD" ForeColor="DarkBlue" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="Tag" ForeColor="Green" BackColor="" Bold="true" Italic="false" Underline="false" />
+
+</Language>
+

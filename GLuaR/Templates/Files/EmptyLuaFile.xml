@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Template Version="1.0">
+  <ID>File.Lua.Empty</ID>
+  <Name>Empty Lua File</Name>
+  <Description><![CDATA[Empty Lua File]]></Description>
+  <Visible>1</Visible>
+  <DefaultFileName>code.lua</DefaultFileName>
+  <Code><![CDATA[-- ${File}
+-- Author: ${Author}
+-- ${Date}]]></Code>
+</Template>

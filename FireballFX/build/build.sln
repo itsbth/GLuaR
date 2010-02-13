@@ -1,0 +1,126 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.Win32", "..\Fireball.Win32\Fireball.Win32\Fireball.Win32.csproj", "{A72D738D-B07F-4920-B4E7-543D18967FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.Core", "..\Fireball.Core\Fireball.Core.csproj", "{909AD284-7020-4FA9-A55E-7C633A641724}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A72D738D-B07F-4920-B4E7-543D18967FBF} = {A72D738D-B07F-4920-B4E7-543D18967FBF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.CodeEditor", "..\Fireball.CodeEditor\Fireball.CodeEditor\Fireball.CodeEditor.csproj", "{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}"
+	ProjectSection(ProjectDependencies) = postProject
+		{909AD284-7020-4FA9-A55E-7C633A641724} = {909AD284-7020-4FA9-A55E-7C633A641724}
+		{A72D738D-B07F-4920-B4E7-543D18967FBF} = {A72D738D-B07F-4920-B4E7-543D18967FBF}
+		{3F43BAB0-22B4-4FD6-9655-8BA214A093A5} = {3F43BAB0-22B4-4FD6-9655-8BA214A093A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.CodeEditor.SyntaxFiles", "..\Fireball.CodeEditor.SyntaxFiles\Fireball.CodeEditor.SyntaxFiles.csproj", "{3814F627-858A-42A3-9AAF-CD649413F2A8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94BFA44A-F4D0-4605-88E6-3ADD498F5E16} = {94BFA44A-F4D0-4605-88E6-3ADD498F5E16}
+		{3F43BAB0-22B4-4FD6-9655-8BA214A093A5} = {3F43BAB0-22B4-4FD6-9655-8BA214A093A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.Docking", "..\Fireball.Docking\Fireball.Docking\Fireball.Docking.csproj", "{D3C782BA-178E-4235-A3BA-8C11DEBB6BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.Plugins", "..\Fireball.Plugins\Fireball.Plugins\Fireball.Plugins.csproj", "{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.Ssh", "..\Fireball.Ssh\Fireball.Ssh\Fireball.Ssh.csproj", "{43B48F08-5432-411B-BF51-A5B541A63CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.SyntaxDocument", "..\Fireball.SyntaxDocument\Fireball.SyntaxDocument.csproj", "{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fireball.Windows.Forms", "..\Fireball.Windows.Forms\Fireball.Windows.Forms.csproj", "{0E253078-0AFA-4B69-B27A-001B96735D60}"
+	ProjectSection(ProjectDependencies) = postProject
+		{909AD284-7020-4FA9-A55E-7C633A641724} = {909AD284-7020-4FA9-A55E-7C633A641724}
+		{A72D738D-B07F-4920-B4E7-543D18967FBF} = {A72D738D-B07F-4920-B4E7-543D18967FBF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeImage.Examples", "..\examples\FreeImage.Examples\FreeImage.Examples.csproj", "{5CDD2E85-F84E-401D-B275-3A684FECCBD7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs02.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\Fireball.Win32\\Fireball.Win32\\Fireball.Win32.csproj
+		SccProjectName1 = ../Fireball.Win32/Fireball.Win32
+		SccLocalPath1 = ..\\Fireball.Win32\\Fireball.Win32
+		SccProjectUniqueName2 = ..\\Fireball.Core\\Fireball.Core.csproj
+		SccProjectName2 = ../Fireball.Core
+		SccLocalPath2 = ..\\Fireball.Core
+		SccProjectUniqueName3 = ..\\Fireball.CodeEditor\\Fireball.CodeEditor\\Fireball.CodeEditor.csproj
+		SccProjectName3 = ../Fireball.CodeEditor/Fireball.CodeEditor
+		SccLocalPath3 = ..\\Fireball.CodeEditor\\Fireball.CodeEditor
+		SccProjectUniqueName4 = ..\\Fireball.CodeEditor.SyntaxFiles\\Fireball.CodeEditor.SyntaxFiles.csproj
+		SccProjectName4 = ../Fireball.CodeEditor.SyntaxFiles
+		SccLocalPath4 = ..\\Fireball.CodeEditor.SyntaxFiles
+		SccProjectUniqueName5 = ..\\Fireball.Docking\\Fireball.Docking\\Fireball.Docking.csproj
+		SccProjectName5 = ../Fireball.Docking/Fireball.Docking
+		SccLocalPath5 = ..\\Fireball.Docking\\Fireball.Docking
+		SccProjectUniqueName6 = ..\\Fireball.Plugins\\Fireball.Plugins\\Fireball.Plugins.csproj
+		SccProjectName6 = ../Fireball.Plugins/Fireball.Plugins
+		SccLocalPath6 = ..\\Fireball.Plugins\\Fireball.Plugins
+		SccProjectUniqueName7 = ..\\Fireball.Ssh\\Fireball.Ssh\\Fireball.Ssh.csproj
+		SccProjectName7 = ../Fireball.Ssh/Fireball.Ssh
+		SccLocalPath7 = ..\\Fireball.Ssh\\Fireball.Ssh
+		SccProjectUniqueName8 = ..\\Fireball.SyntaxDocument\\Fireball.SyntaxDocument.csproj
+		SccProjectName8 = ../Fireball.SyntaxDocument
+		SccLocalPath8 = ..\\Fireball.SyntaxDocument
+		SccProjectUniqueName9 = ..\\Fireball.Windows.Forms\\Fireball.Windows.Forms.csproj
+		SccProjectName9 = ../Fireball.Windows.Forms
+		SccLocalPath9 = ..\\Fireball.Windows.Forms
+		SccProjectUniqueName10 = ..\\examples\\FreeImage.Examples\\FreeImage.Examples.csproj
+		SccProjectName10 = ../examples/FreeImage.Examples
+		SccLocalPath10 = ..\\examples\\FreeImage.Examples
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A72D738D-B07F-4920-B4E7-543D18967FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72D738D-B07F-4920-B4E7-543D18967FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72D738D-B07F-4920-B4E7-543D18967FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72D738D-B07F-4920-B4E7-543D18967FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{909AD284-7020-4FA9-A55E-7C633A641724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909AD284-7020-4FA9-A55E-7C633A641724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909AD284-7020-4FA9-A55E-7C633A641724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909AD284-7020-4FA9-A55E-7C633A641724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3814F627-858A-42A3-9AAF-CD649413F2A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3814F627-858A-42A3-9AAF-CD649413F2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3814F627-858A-42A3-9AAF-CD649413F2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3814F627-858A-42A3-9AAF-CD649413F2A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C782BA-178E-4235-A3BA-8C11DEBB6BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C782BA-178E-4235-A3BA-8C11DEBB6BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C782BA-178E-4235-A3BA-8C11DEBB6BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C782BA-178E-4235-A3BA-8C11DEBB6BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43B48F08-5432-411B-BF51-A5B541A63CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B48F08-5432-411B-BF51-A5B541A63CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B48F08-5432-411B-BF51-A5B541A63CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B48F08-5432-411B-BF51-A5B541A63CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E253078-0AFA-4B69-B27A-001B96735D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E253078-0AFA-4B69-B27A-001B96735D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E253078-0AFA-4B69-B27A-001B96735D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E253078-0AFA-4B69-B27A-001B96735D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDD2E85-F84E-401D-B275-3A684FECCBD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDD2E85-F84E-401D-B275-3A684FECCBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDD2E85-F84E-401D-B275-3A684FECCBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDD2E85-F84E-401D-B275-3A684FECCBD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
