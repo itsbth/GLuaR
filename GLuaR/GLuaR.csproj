@@ -93,6 +93,8 @@
     <Compile Include="Classes\Project\Templates\ProjectTemplate.cs" />
     <Compile Include="Classes\Project\Templates\Template.cs" />
     <Compile Include="Classes\Project\Templates\Templates.cs" />
+    <Compile Include="Classes\Snippet\Snippet.cs" />
+    <Compile Include="Classes\Snippet\SnippetManager.cs" />
     <Compile Include="Classes\StringTable.cs" />
     <Compile Include="Classes\Util.cs" />
     <Compile Include="Classes\Workspace\OpenedFile.cs" />
@@ -311,7 +313,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\Derma\" />
-    <Folder Include="Classes\Snippet\" />
     <Folder Include="Templates\Complex\" />
   </ItemGroup>
   <ItemGroup>

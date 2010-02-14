@@ -1,0 +1,10 @@
+GLuaR
+
+Original by Voided, GLuaR by FPMarine, voidedweasel, stephen.swires, AzuiSleet, gparent, itsbth, JamieSharpee
+Fork by itsbth
+
+Changes:
+ * File templates (and eventually project templates) loaded from files
+
+Notes:
+ VS2008 solution is outdated.
